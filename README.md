@@ -1,8 +1,15 @@
-# React + Vite
+# 💡Sticker Diary
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+스티커와 생성된 텍스트를 드래그해서 다이어리를 꾸미는 서비스입니다.
 
-Currently, two official plugins are available:
+# 🖥️View web site
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+https://yumi-kim-0827.github.io/nagunagu/
+
+# ✏️Technologies Used
+
+1.  React
+2.  Router
+3.  SCSS
+4.  JS
+5.  GSAP
