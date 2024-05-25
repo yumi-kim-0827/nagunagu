@@ -1,0 +1,63 @@
+@font-face {
+  font-family: "NanumSquareRound";
+  src: url("/NanumSquareRoundOTFR.otf");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "YClover-Bold";
+  src: url("/YClover-Bold.otf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+// Reset styles
+html,
+body,
+ul,
+ol,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: 0;
+}
+
+// Typography
+body {
+  font-family: "NanumSquareRound";
+  font-size: 16px;
+  line-height: 1.6;
+  background-color: FCFCFC;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: bold;
+}
+
+p {
+  margin: 0;
+}
+
+// Links
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// Container
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
