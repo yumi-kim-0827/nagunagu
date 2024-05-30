@@ -5,10 +5,4 @@ import react from "@vitejs/plugin-react-swc";
 export default defineConfig({
   plugins: [react()],
   base: "/nagunagu/",
-  pagesDir: [
-    {
-      dir: "src/pages",
-      baseRoute: "/nagunagu",
-    },
-  ],
 });
