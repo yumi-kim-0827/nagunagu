@@ -1,6 +1,6 @@
 # 💡Sticker Diary
 
-스티커와 생성된 텍스트를 드래그해서 다이어리를 꾸미는 서비스입니다.
+스티커와 생성된 텍스트를 드래그해서 꾸민 다이어리 페이지를 다운받는 서비스입니다.
 
 # 🖥️View web site
 
@@ -8,7 +8,7 @@ https://yumi-kim-0827.github.io/nagunagu/
 
 <!--프로젝트 대문 이미지-->
 
-![screen1](https://github.com/yumi-kim-0827/simpletodo/assets/116349476/b741156e-cf27-492e-af50-4a98a950ee3b)
+![스크린샷 2024-06-06 152954](https://github.com/yumi-kim-0827/nagunagu/assets/116349476/21f759a4-95dd-426a-81a8-b4a1cd765154)
 
 <!--목차-->
 
@@ -29,13 +29,14 @@ https://yumi-kim-0827.github.io/nagunagu/
 
 # [1] About the Project
 
-이름을 적어 로그인 후 스티커를 드래그하고 5개의 텍스트를 생성, 드래그해서
+이름을 적어 로그인 후 스티커를 드래그하고 5개의 텍스트를 생성, 드래그해서  
 다이어리를 꾸민 후 스크린 이미지를 다운받을 수 있습니다.
 
 ## Features
 
-- 유연한 드래그 기능
-- api 연결을 통한 user 고유 아이디, 페이지 생성
+- gsap react를 활용하여 유연한 드래그 드롭 기능
+- html2canvas와 saveon을 활영하여 지정된 영역 캡쳐와 다운로드 기능
+- api 연결을 통한 user 고유 아이디, 다이어리 컨텐츠 생성
 
 ## Technologies
 
@@ -74,11 +75,41 @@ npm install
 
 # [3] Usage
 
-설명
+- html2canvas 설치 후 지정한 영역을 캡쳐하여 이미지로 다운받을 수 있습니다.
 
 ```java
 
-code here
+import html2canvas from "html2canvas";
+
+.
+.
+.
+
+const captureArea = useRef();
+  //html2canvas
+  const onCapture = () => {
+    html2canvas(captureArea.current).then((canvas) => {
+      onSaveAs(canvas.toDataURL("./assets"), "image-download.png");
+    });
+  };
+  const onSaveAs = (uri, filename) => {
+    const link = document.createElement("a");
+    document.body.appendChild(link);
+    link.href = uri;
+    link.download = filename;
+    link.click();
+    document.body.removeChild(link);
+  };
+
+  .
+  .
+  .
+  return (
+          <div className="captured_area" ref={captureArea}>
+          캡쳐영역
+          </div>
+  )
+
 ```
 
 # [4] Contribution
