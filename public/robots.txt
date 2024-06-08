@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://yumi-kim-0827.github.io/nagunagu/sitemap.xml
