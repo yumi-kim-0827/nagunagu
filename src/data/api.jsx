@@ -47,3 +47,14 @@ export const getInput = async (param) => {
     console.log(error);
   }
 };
+// [API GET] 해당 SUBJECT ID 이름 조회
+export const getSubjectId = async (param) => {
+  try {
+    const responses = await axios.get(
+      `https://openmind-api.vercel.app/0827/subjects/${param}/`
+    );
+    return responses.data;
+  } catch (error) {
+    console.log(error);
+  }
+};
