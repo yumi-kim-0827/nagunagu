@@ -37,7 +37,7 @@ const Input = () => {
   const getInputList = async () => {
     try {
       const data = await getInput(param);
-      setInputList(data.results);
+      setInputList(data.results.reverse());
     } catch (error) {
       console.log(error);
     }
@@ -70,7 +70,12 @@ const Input = () => {
           onChange={handleInputChange}
           disabled={inputList.length > 4}
         />
-        <Button text={"추가"} type={"primary"} onClick={handleInputClick} />
+        <Button
+          text={"추가"}
+          type={"primary"}
+          onClick={handleInputClick}
+          disable={inputList.length === 5 ? true : false}
+        />
       </div>
 
       <div className="input_list">
